@@ -1,19 +1,19 @@
 var player = {
     Offers: [{
         item: "Dirt",
-        type: "Sell",
-        price: 0.15,
-        amnt: 100,
-        timer: 100000,
-    }, {
-        item: "Dirt",
         type: "Buy",
         price: 0.1,
-        amnt: 100,
-        timer: 100000,
+        amnt: 300,
+        timer: 200000,
+    }, {
+        item: "Dirt",
+        type: "Sell",
+        price: 0.15,
+        amnt: 300,
+        timer: 200000,
     }],
     Tax: { Buy: 0.1, Sell: 0.1 },
-    Cash: 10,
+    Cash: 25,
     Items: {},
     NewOfferTimer: 100000,
 }
