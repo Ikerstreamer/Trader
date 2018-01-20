@@ -1,1 +1,50 @@
 
+<DOCTYPE html>
+    <title>Trader Idle</title>
+    <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="interface.css" />
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body onload="init()">
+        <h1 style="text-align:center; font:bold">Trader</h1>
+        <div style="display:inline-block; width:20%;">
+            <h2>Stats</h2>
+        <table align="left" border="1">
+            <tbody id="statsTable">
+                <tr>
+                    <td>Cash</td>
+                    <td>10$</td>
+                </tr>
+                <tr>
+                    <td>Sell Tax</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>Buy Tax</td>
+                    <td>10%</td>
+                </tr>
+            </tbody>
+        </table>
+            </div>
+        <div style="display:inline-block;  width:35%; margin-left:10%;">
+             <h2 >Offers</h2> 
+            <table align="left" border="1">
+                <thead style="text-align:center">
+                    <tr><td>Item</td><td>Sell/Buy</td><td>Price</td><td>Units</td><td>Select</td></tr>
+                </thead>
+                <tbody id="offersTable">
+                </tbody>
+            </table>
+            </div>
+        <div style="display:inline-block; width:20%; margin-left:10%;">
+            <h2>Items</h2>
+            <table align="left" border="1">
+                <tbody id="itemsTable">
+                </tbody>
+            </table>
+        </div>
+        <button style=" margin-top:80%;vertical-align:bottom; text-align:left;" onclick="reset()">Reset</button>
+</body>
+</html>
+

@@ -1,1 +1,10 @@
+body {
+    font-family:Impact;
+}
 
+table {
+    border-color: black;
+    border-style: ridge;
+    background-color: lightgray;
+    width: 100%;
+}
