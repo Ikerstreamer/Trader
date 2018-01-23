@@ -31,7 +31,7 @@ function selectOffer(index) {
     if (Offer.type == "Buy") {
         var TaxMulti = 1 + player.Tax[Offer.type]
         if ((num * Offer.price) * TaxMulti <= player.Cash) {
-            if (confirm("Are you sure u want to buy " + num + " units of " + Offer.item.toLowerCase() + " for " + (num * Offer.price).toFixed(2) + "$ with a sales tax of " + (num * Offer.price * player.Tax[Offer.type]).toFixed(2) + "$? (This would make the net cost " + (num * Offer.price * TaxMulti).toFixed(2) + "$)"))
+            if (confirm("Are you sure u want to buy " + num + " units of " + Offer.item.toLowerCase() + " for $" + (num * Offer.price).toFixed(2) + " with a sales tax of "+ player.Tax[Offer.type] +"% ($"+ (num * Offer.price * player.Tax[Offer.type]).toFixed(2) + ")? (This would make the net cost $" + (num * Offer.price * TaxMulti).toFixed(2) + ")"))
                 player.Cash -= num * Offer.price * TaxMulti;
             if (isNaN(player.Items[Offer.item])) player.Items[Offer.item] = num;
             else player.Items[Offer.item] += num;
@@ -39,7 +39,7 @@ function selectOffer(index) {
         } else alert("You dont have enough cash!");
     } else if (player.Items[Offer.item] >= num) {
         var TaxMulti = 1 - player.Tax[Offer.type];
-        if (confirm("Are you sure u want to sell " + num + " units of " + Offer.item.toLowerCase() + " for " + (num * Offer.price).toFixed(2) + "$ with a sales tax of " + (num * Offer.price * player.Tax[Offer.type]).toFixed(2) + "$? (This would make your net profit " + (num * Offer.price * TaxMulti).toFixed(2) + "$)")) {
+        if (confirm("Are you sure u want to sell " + num + " units of " + Offer.item.toLowerCase() + " for $" + (num * Offer.price).toFixed(2) + " with a sales tax of "+player.Tax[Offer.type]+"% ($" + (num * Offer.price * player.Tax[Offer.type]).toFixed(2) + ")? (This would make your net profit " + (num * Offer.price * TaxMulti).toFixed(2) + "$)")) {
             player.Cash += num * Offer.price * TaxMulti;
             player.Items[Offer.item] -= num;
             Offer.amnt -= num;
