@@ -9,3 +9,7 @@ table {
     background-color: lightgray;
     width: 100%;
 }
+
+.hidden {
+    display: none !important;
+}
